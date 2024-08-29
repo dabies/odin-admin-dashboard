@@ -12,14 +12,103 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
-    gap: 4px;
     height: 100vh;
 }
 
 .header {
-    background-color: aquamarine;
+    background-color: --card-color;
     display: grid;
+    grid-template-columns: 2fr 1fr;
     grid-area: 1 / 2 / 2 / -1;
+    height: 170px
+}
+
+.header .user {
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    gap: 10px;
+    position: relative;
+    bottom: 15px;
+}
+
+.header .search {
+    display: grid;
+}
+
+input[type='search'] {
+    width: 80%;
+    line-height: 2;
+    border-radius: 20px;
+    place-self: center;
+    background-color: var(--content-bg);
+    border: none;
+    position: relative;
+    bottom: 50px;
+}
+
+header span::before {
+    content: url(/logos/magnify.svg);
+    width: 25px;
+    position: relative;
+    left: 55px;
+    top: 18px;
+}
+
+header p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.user img:first-child {
+    width: 30px;
+}
+
+.user img:nth-child(2) {
+    width: 80px;
+}
+
+.action-buttons {
+    display: grid;
+    align-content: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    position: relative;
+    bottom: 35px;
+}
+
+header button {
+    padding: 12px;
+    border-radius: 20px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+}
+
+.welcome {
+    display: flex;
+    margin-left: 40px;
+    gap: 10px;
+    position: relative;
+    bottom: 30px;
+}
+
+.welcome img {
+    width: 80px;
+    position: relative;
+    bottom: 20px;
+}
+
+.greeting p:nth-child(1) {
+    font-size: 1.25rem;
+}
+
+.greeting p:nth-child(2) {
+    position: relative;
+    bottom: 30px;
 }
 
 .sidebar {
@@ -99,6 +188,7 @@ p.info {
 .announcements .card {
     margin-right: 30px;
     height: 60%;
+    place-content: center;
 }
 
 .announcements .article {
