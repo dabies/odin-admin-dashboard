@@ -64,6 +64,11 @@ header p {
     width: 30px;
 }
 
+.user img:hover {
+    position: relative;
+    bottom: 2px;
+}
+
 .user img:nth-child(2) {
     width: 80px;
 }
@@ -86,6 +91,15 @@ header button {
     font-weight: bold;
     font-size: 1rem;
     border: none;
+    box-shadow: 2px 2px 2px 0px rgba(153, 153, 153, 0.75);
+}
+
+header button:hover {
+    background-color: rgb(74, 164, 253);
+}
+
+header button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .welcome {
@@ -127,6 +141,10 @@ header button {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: var(--content-bg);
+}
+
+.card {
+    box-shadow: 5px 5px 5px 0px rgba(153, 153, 153, 0.75);
 }
 
 .projects {
